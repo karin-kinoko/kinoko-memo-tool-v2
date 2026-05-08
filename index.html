@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>備考欄整形ツール v3 - テキスト＋Excel</title>
+<title>予約内容まとめAI - 木の子交通</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
@@ -512,10 +512,10 @@ textarea::placeholder {
 <header class="header">
   <div class="header-left">
     <div>
-      <h1>備考欄整形ツール v3</h1>
+      <h1>予約内容まとめAI</h1>
       <div class="api-status" id="apiStatus"></div>
     </div>
-    <span class="subtitle">AI自動整形 - 木の子交通</span>
+    <span class="subtitle">木の子交通株式会社</span>
   </div>
   <button class="settings-btn" onclick="openSettings()" title="API設定">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -664,7 +664,11 @@ ___________________________________________
 【ミートサービス】不要
 【エスコート】不要
 ガイド/アシスタント：なし
-【ドライバー】松原 / 車両: 確認済みであれば記載
+乗務員と車両番号について
+名前：松原（Matsubara MR）
+電話：080-XXXX-XXXX
+車番：品川332か7697
+車種：アルファード
 【料金】¥17,000
 
 ※注意事項：
@@ -681,7 +685,11 @@ ___________________________________________
 【ミートサービス】不要
 【エスコート】不要
 ガイド/アシスタント：田中様 / 080-XXXX-XXXX
-【ドライバー】未定 / 車両: 未定
+乗務員と車両番号について
+名前：未定
+電話：未定
+車番：未定
+車種：未定
 【料金】¥65,000
 
 ※注意事項：
@@ -698,7 +706,7 @@ Esther Miriam Schwartz
 
 緊急：
 （お客様）David Schwartz：電話番号あれば記載
-（アシスタント）田中様：080-XXXX-XXXX
+（アシスタント）5/14担当 田中様：080-XXXX-XXXX
 （手配担当者）Natsuki Ishizuka様：070-4208-0749
 （依頼会社）80 Days Japan：03-6730-8485
 ___________________________________________
@@ -721,12 +729,20 @@ ___________________________________________
 
 ■ ガイド/アシスタント/斜旋員
 - ガイド、アシスタント、斜旋員は全て同じ意味（名称が違うだけ）
-- 明記されていなければ「なし」と記載（「連絡待ち」とは書かない）
+- 明記されていなければ「なし」と記載（「連絡待ち」や「未定」とは書かない）
+- 名前が記載されているのに「未定」と書かないこと。名前と電話番号をセットで記載
 - 日によって異なる場合があるので、各予約ごとに個別に記載
 - ガイド/アシスタントの連絡先とドライバーの連絡先を絶対に混同しない
 
-■ ドライバー・車両
+■ ドライバー・車両（乗務員情報）
 - メール内で案内済みの場合は必ず記載
+- 以下のフォーマットで記載すること：
+  乗務員と車両番号について
+  名前：{名前}（{英語表記 MR/MS}）
+  電話：{電話番号}
+  車番：{ナンバープレート}
+  車種：{車種名}
+- 未定の場合は各項目を「未定」と記載
 
 ■ 貴社予約番号
 - 予約番号はメール本文だけでなく、件名（Subject）に入っていることもある
@@ -736,7 +752,9 @@ ___________________________________________
 ■ 緊急連絡先
 - 手配担当者 = エージェント側のやり取り相手（メール差出人等）
 - 手配担当者と依頼会社の電話番号は必須
-- ガイド/アシスタント同行時はその連絡先も必須
+- ガイド/アシスタント同行時はその連絡先も必須。担当日付も一緒に記載
+- 例：（アシスタント）5/10担当 Ms. Ryoko Rio Teranishi：+81 80-5647-5967
+- 例：（アシスタント）5/12担当 Ms. Kimiko Tsukushi：+81 80-5432-5640
 
 ■ 利用時間・行程
 - 利用時間は「貸切○時間 / 00:00〜00:00」の形式で記載
